@@ -150,10 +150,7 @@ function bigAppend(txt, data, link, isroot){
                     <span>${txt}</span>
                     <div>
                       <span class="icon plus-icon" data-label="${txt}" data-uri="${url}"><i class="fas fa-plus"></i></span>
-                      ${isroot ? '' :`
-                        <span class="icon pencil-icon mx-4" data-label="${txt}" data-uri="${url}"><i class="fas fa-pen"></i></span>
-                        <span class="icon delete-icon" data-label="${txt}" data-uri="${url}"><i class="fas fa-trash"></i></span>
-                      `}
+                      ${isroot ? '' :`<span class="icon delete-icon" data-label="${txt}" data-uri="${url}"><i class="fas fa-trash"></i></span>`}
                     </div>
                 </div>
             </li>
