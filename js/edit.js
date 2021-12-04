@@ -7,7 +7,6 @@ function onBack(){
 }
 function onSubmit(evt){
     evt.preventDefault();
-
     const { innerHTML } = document.getElementById('edit-content');
     const url = document.getElementById('url-content').value;
     $.ajax({
@@ -17,12 +16,8 @@ function onSubmit(evt){
             text: replaceAll(replaceAll(innerHTML, '<div>', "\n"), '</div>', '')
         },
     })
-    .done(function (done){
-        console.log(done)
-    })
-    .fail(function (jqXHR, textStatus, errorThrown){
-        console.log(jqXHR, textStatus, errorThrown)
-    });
+    .done(onBack)
+    .fail(onBack);
 }
 
 document.getElementById('form-edit-content').addEventListener('submit', onSubmit);

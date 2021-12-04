@@ -31,7 +31,7 @@ $title = $title[count($title)-1];
     <main>
         <form id="form-edit-content" class="p-4">
             <input type="hidden" id="url-content" value="<?php echo $_GET['dir'] ?>" />
-            <input type="text" id="title-content" class="form-control" value="<?php echo $title ?>" />
+            <input type="text" id="title-content" disabled="true" class="form-control" value="<?php echo $title ?>" />
             <div class="content" id="edit-content" contenteditable="true"><?php echo "".$file ?></div>
             <div class="content-btn">
                 <button type="button" class="btn btn-secondary btn-md mx-2" id="cancelar">
